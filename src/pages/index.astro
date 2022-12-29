@@ -1,4 +1,6 @@
 ---
+const hobbies = ['Programar', 'Leer', 'Jugar', 'Salir al Cine']
+const isLogged = true
 ---
 
 <html lang="en">
@@ -10,6 +12,23 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+
+		<p>
+			{ isLogged 
+				? 'Cerrar sesion' 
+				: 'Iniciar sesion'
+			}
+		</p>
+
+		<h1>Welcome Astro</h1>
+		<h3>Hobbies:</h3>
+		<ul>
+			{ hobbies.map( hobby => 
+				<li> 
+					<b> {hobby} </b>
+					<i><button type="button">Like</button></i>
+				</li>
+			)}
+		</ul>
 	</body>
 </html>

@@ -1,13 +1,16 @@
 ---
+import Layout from "../components/layout.astro";
 import ServiceItem from '../components/serviceItem.astro'
 ---
 
-<h1>Services</h1>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus illo sed, ab saepe et officiis quaerat obcaecati quae nihil minima tempora debitis velit, modi dolores ut accusantium quos, quasi mollitia fugiat magni laboriosam. Corrupti quibusdam excepturi reprehenderit quas recusandae odit, molestias perspiciatis eveniet pariatur modi esse earum maiores reiciendis cum.`</p>
-
-<ServiceItem 
-    title="Service 1"
-    excerpt="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus illo sed, ab saepe"
-/>
-
-<ServiceItem/>
+<Layout pageTitle="Services">
+    <h1>Services</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus illo sed, ab saepe et officiis quaerat obcaecati quae nihil minima tempora debitis velit, modi dolores ut accusantium quos, quasi mollitia fugiat magni laboriosam. Corrupti quibusdam excepturi reprehenderit quas recusandae odit, molestias perspiciatis eveniet pariatur modi esse earum maiores reiciendis cum.`</p>
+    
+    <ServiceItem 
+        title="Service 1"
+        excerpt="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus illo sed, ab saepe"
+    />
+    
+    <ServiceItem/>
+</Layout>

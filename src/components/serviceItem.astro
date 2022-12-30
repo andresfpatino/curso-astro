@@ -1,0 +1,21 @@
+---
+interface Props{
+    title?: string,  // ? indica que es opcional
+    excerpt?: string
+}
+const { title = "Default title", excerpt = "Default excerpt" } = Astro.props
+---
+
+<style>
+    .serviceItem{
+        background-color: #939393;
+        padding: 12px;
+        border-radius: 5px;
+        margin: 12px;
+    }
+</style>
+
+<div class="serviceItem">
+    <h1>{title}</h1>
+    <p>{excerpt}</p>
+</div>

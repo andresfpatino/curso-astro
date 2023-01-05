@@ -1,0 +1,30 @@
+---
+import Layout from "../../components/layout.astro";
+
+const posts = await Astro.glob('./post/*.md')
+
+---
+
+<Layout 
+    pageTitle="Publicaciones de desarrollo web"
+    metaDescription="Tutoriales de desarrollo y programación" >
+
+    <h1>Publicaciones</h1>
+
+    <ul>
+        {
+            posts.map(post => {
+                return <li>
+                            <h4> {post.frontmatter.title} </h4>
+                            <p> {post.frontmatter.date} </p>
+                            <p>Author: {post.frontmatter.author}</p>
+                            <p>{post.frontmatter.excerpt}</p>
+                            <a href={post.url}>Read more</a>
+                        </li>
+            })
+        }
+    </ul>
+    
+    
+
+</Layout>

@@ -14,17 +14,47 @@ const { pageTitle, metaDescription } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content={metaDescription}>
     <title>Curso Astro | {pageTitle}</title>
-</head>
-<body>
-    
-    <slot/>
 
     <style>
         body{
             background: #202020;
             color: #fff;
         }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            list-style: none;
+            padding-left: 0px;
+            background-color: black;
+            padding: 24px;
+        }
+        nav ul > li > a{
+            color: #fefefe;
+            text-decoration: none;
+        }
+        nav ul > li > a:hover{
+            color: burlywood;
+            text-decoration: underline;
+        }
     </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about-us/">About us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <slot/>
+
+
 
 </body>
 </html>

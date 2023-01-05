@@ -1,5 +1,6 @@
 ---
 import Layout from "../../components/layout.astro";
+import bgImage from "../../img/post1.jpg";
 
 const posts = await Astro.glob('./post/*.md')
 
@@ -16,6 +17,7 @@ const posts = await Astro.glob('./post/*.md')
             posts.map(post => {
                 return <li>
                             <h4> {post.frontmatter.title} </h4>
+                            <img width="150" src={bgImage} alt="">
                             <p> {post.frontmatter.date} </p>
                             <p>Author: {post.frontmatter.author}</p>
                             <p>{post.frontmatter.excerpt}</p>

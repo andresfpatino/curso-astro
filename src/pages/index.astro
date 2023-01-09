@@ -3,6 +3,8 @@ import Layout from "../components/layout.astro";
 
 const hobbies = ['Programar', 'Leer', 'Jugar', 'Salir al Cine']
 const isLogged = true
+
+import ButtonSuscribe from '../components/ButtonSuscribe';
 ---
 
 <Layout 
@@ -26,5 +28,8 @@ const isLogged = true
 			</li>
 		)}
 	</ul>
+
+	<ButtonSuscribe client:visible/>
+	
 	
 </Layout>
